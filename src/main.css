@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.font-kanit {
+  font-family: "Kanit", sans-serif;
+}
+
+.font-bungee {
+  font-family: "Bungee", sans-serif;
+}
+
+p,
+ul,
+ol,
+pre {
+  margin-bottom: 1rem;
+}
+
+ol,
+ul:not(.menu) {
+  list-style-type: disc;
+  padding-left: 1rem;
+}
+
+pre {
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  background-color: rgba(229, 231, 235, var(--tw-bg-opacity));
+}
+
+.dark pre {
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  background-color: rgba(31, 41, 55, var(--tw-bg-opacity));
+}
+
+.comment.depth-1 {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.comment.depth-2 {
+  padding-left: 3rem;
+  padding-right: 3rem;
+}
+
+.comment.depth-3 {
+  padding-left: 6rem;
+  padding-right: 6rem;
+}
+
+.comment.depth-4 {
+  padding-left: 9rem;
+  padding-right: 9rem;
+}
+
+#notFound #search {
+  display: block;
+}

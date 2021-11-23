@@ -1,0 +1,18 @@
+{
+  "name": "moaitodev",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "css-dev": "TAILWIND_MODE=watch postcss src/main.css -o assets/css/main.css -w --verbose",
+    "css-prod": "NODE_ENV=production postcss src/main.css -o assets/css/main.css"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^10.4.0",
+    "cssnano": "^5.0.11",
+    "postcss-cli": "^9.0.2",
+    "tailwindcss": "^2.2.19"
+  }
+}
