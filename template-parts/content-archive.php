@@ -1,7 +1,7 @@
-  <div class="max-w-5xl mx-auto mb-24 relative flex flex-col md:flex-row">
+  <div class="mb-24 relative flex flex-col md:flex-row">
   
-    <div class="pr-6 w-5/12">
-      <div class="mb-6">
+    <div class="w-full mb-4 lg:pr-6 lg:w-5/12">
+      <div class="mb-4">
         <div>
           <div class="font-bungee text-2xl mb-4"><a class="" href="<?php the_permalink(); ?>"><?php the_title(); ?></a></div>
           <div class="mb-4 text-sm">
@@ -9,7 +9,7 @@
           </div>
         </div>
       </div>
-      <div class="py-4 my-6">
+      <div class="py-4 my-4">
         <?php 
           the_excerpt();
         ?>
@@ -29,7 +29,7 @@
         </div>
       </div>
     </div>
-    <div class="w-7/12">
+    <div class="w-full lg:w-7/12">
       <a class="" href="<?php the_permalink(); ?>">
         <?php 
           the_post_thumbnail("post-thumbnail", array(
