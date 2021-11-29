@@ -10,8 +10,20 @@ $(document).on("click", ".menu-btn", function () {
 
 $(document).on("click", ".theme-btn", changeTheme);
 
-$(document).on("click", ".search-btn", function () {
+$(document).on("click", ".search-btn", function (event) {
   $(".search-box").removeClass("hidden");
+});
+
+$(document).on("click", "a", function (event) {
+  event.preventDefault();
+  const url = $(event.target).closest("a").attr("href");
+  showVeil(() => {
+    location.replace(url);
+  });
+});
+
+$(function () {
+  hideVeil();
 });
 
 function setTheme(set) {
@@ -40,4 +52,29 @@ function changeTheme() {
   } else {
     setTheme("dark");
   }
+}
+
+function hideVeil() {
+  const veil = $("#veil");
+  veil.addClass("transition-all");
+  veil.addClass("duration-500");
+
+  setTimeout(function () {
+    veil.addClass("opacity-0");
+    setTimeout(function () {
+      veil.addClass("hidden");
+    }, 500);
+  }, 500);
+}
+
+function showVeil(callback) {
+  const veil = $("#veil");
+  veil.removeClass("hidden");
+
+  setTimeout(function () {
+    veil.removeClass("opacity-0");
+    setTimeout(function () {
+      callback();
+    }, 500);
+  }, 500);
 }

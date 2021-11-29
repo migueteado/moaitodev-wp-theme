@@ -8,6 +8,7 @@
 </head>
 <body class="bg-gray-100 dark:bg-gray-900 text-gray-800 dark:text-white overflow-x-hidden">
   <?php wp_body_open(); ?>
+  <div id="veil" class="fixed block bg-gray-100 dark:bg-gray-900 h-screen w-screen z-50"></div>
   <header id="mainHeader" class="fixed top-0 left-0 bg-gray-200 dark:bg-gray-800 w-full shadow-lg transition-all duration-500 border-l border-gray-200 dark:border-gray-800 z-10">
     <div class="bg-gray-200 dark:bg-gray-800 w-full py-2 px-4">
       <div class="flex flex-row items-center justify-center space-x-2">
@@ -51,7 +52,7 @@
           </button>
         </div>
         <div class="ml-2">
-          <a class="font-kanit font-bold text-2xl" href="#">Moaito<span class="text-pink-500">Blog</span></a>
+          <a class="font-kanit font-bold text-2xl" href="<?php echo get_site_url(); ?>">Moaito<span class="text-pink-500">Blog</span></a>
         </div>
         <div class="mr-0 ml-auto">
           <button class="theme-btn ml-2 py-2 px-4 rounded-lg bg-purple-400 hover:bg-purple-500 text-white dark:bg-yellow-400 dark:hover:bg-yellow-300 dark:text-yellow-700 transition-all">
